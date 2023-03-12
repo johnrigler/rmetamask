@@ -1,0 +1,27 @@
+<script src="https://ipfs.io/ipfs/QmXrwZC7E6dweXepYXkZ8T5bY2jiHbatYyHR2BKrbbf5qj"></script>
+<script> 
+Stack = new Array();
+
+function evalStack(x) { eval(`${JSON.parse(Stack[x]).name} = ${JSON.parse(Stack[x]).value}`); }
+
+const urlParams = new URLSearchParams(document.location.search);
+
+id = urlParams.get('id');
+
+peer = new Peer(id);
+
+peer.on('connection', (c) => { 
+	 c.on('data', (d) => { 
+	  e=d.split(" ")[0];
+	  f=d.split(" ")[1];
+          if(e == 'eval')eval(d.slice(5));
+          if(e == 'cons')console.log(eval(d.slice(5)));
+	      if(e == 'push'){ 
+               Stack.push(JSON.stringify(
+               { "name":f,"value":d.slice(f.length + 6)}
+	       )); }
+	      if(e == 'func'){ 
+	       eval(f + "=" + d.slice(f.length + 6))
+	       }
+
+	 }); }); </script>
