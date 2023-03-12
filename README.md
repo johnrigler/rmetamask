@@ -1,7 +1,6 @@
 # webshim
 This tool has grown and changed. It started its like as a hack to allow to you run Metamask from your local C:// directory. But it has turned into a generic tool
-that uses Peerjs to create a remote web shim that you can control locally. I will put a version out on IPFS, but you should be able to actually 
-use the shim directly from github.
+that uses Peerjs to create a remote web shim that you can control locally. I will put a version out on IPFS so can run it from there or download to your own website. Of course if you had a website to download to, then you wouldn't need the shim to begin with.
 
 ---------------------------------------------------------------
 An interesting hack that allows you to run Metamask from your local computer
