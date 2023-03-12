@@ -1,4 +1,9 @@
-# rmetamask
+# webshim
+This tool has grown and changed. It started its like as a hack to allow to you run Metamask from your local C:// directory. But it has turned into a generic tool
+that uses Peerjs to create a remote web shim that you can control locally. I will put a version out on IPFS, but you should be able to actually 
+use the shim directly from github.
+
+---------------------------------------------------------------
 An interesting hack that allows you to run Metamask from your local computer
 
 For some reason, the Metamask tool fails if you call it from your local computer with Javascript. The 'window.ethereum' Object simply does not 
